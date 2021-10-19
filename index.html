@@ -16,6 +16,48 @@
         return !bool;
       }
 
+      function add(x, y) {
+        return x + y;
+      }
+
+      function minus(x, y) {
+        return x - y;
+      }
+
+      describe("Math Functions", () => {
+        let num1;
+        let num2;
+        beforeEach(() => {
+          num1 = 2;
+          num2 = 3;
+        });
+
+        it("Gets the sum of 2 numbers", () => {
+          //arrange
+          //const num1 = 2;
+          //const num2 = 3;
+
+          //act
+          const result = add(num1, num2);
+
+          //assert
+          expect(result).toBe(5);
+          expect(result).toBeGreaterThan(3);
+          expect(result).not.toBeGreaterThan(5);
+        });
+        it("Returs subracted value", () => {
+          //arrange
+          //const num1 = 2;
+          //const num2 = 3;
+
+          //act
+          const result = minus(num1, num2);
+
+          //assert
+          expect(result).toBe(-1);
+        });
+      });
+
       describe("Write Your Test Group Descriptions Here", () => {
         it("Write Your Test Expectation Here", () => {
           // arrange
